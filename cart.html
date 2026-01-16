@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Корзина</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="container">
+        <div class="header__row">
+          <a class="brand" href="./index.html">
+            <div class="brand__logo">Logo</div>
+            <div>Магазин</div>
+          </a>
+
+          <div class="actions">
+            <a class="icon-btn" href="./index.html" title="Каталог"><i class="bi bi-house"></i></a>
+            <a class="icon-btn" href="./orders.html" title="Личный кабинет"><i class="bi bi-person-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="notify" data-notify>
+      <div class="container"></div>
+    </div>
+
+    <main class="main">
+      <div class="container">
+        <section class="block">
+          <h2 style="margin:0;">Корзина</h2>
+
+          <div data-cart-empty style="display:none; margin-top:12px; font-weight:600;">
+            Корзина пуста. Перейдите в каталог, чтобы добавить товары.
+          </div>
+
+          <div class="cards" data-cart-cards></div>
+        </section>
+
+        <section class="block" style="margin-top:16px;">
+          <h2 style="margin:0;">Оформление заказа</h2>
+
+          <form data-order-form style="margin-top:12px;">
+            <div class="row2">
+              <div class="field">
+                <label>Имя</label>
+                <input type="text" name="name" required />
+              </div>
+              <div class="field">
+                <label>Адрес доставки</label>
+                <input type="text" name="address" required />
+              </div>
+            </div>
+
+            <div class="row2">
+              <div class="field">
+                <label>Номер телефона</label>
+                <input type="text" name="phone" required />
+              </div>
+              <div class="field">
+                <label>Дата доставки</label>
+                <input type="date" name="deliveryDate" required />
+              </div>
+            </div>
+
+            <div class="row2">
+              <div class="field">
+                <label>Email</label>
+                <input type="email" name="email" required />
+              </div>
+              <div class="field">
+                <label>Временной интервал доставки</label>
+                <select name="deliveryInterval" required>
+                  <option value="">Выберите…</option>
+                  <option value="08:00-12:00">08:00-12:00</option>
+                  <option value="12:00-14:00">12:00-14:00</option>
+                  <option value="14:00-18:00">14:00-18:00</option>
+                  <option value="18:00-22:00">18:00-22:00</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>
+                <input type="checkbox" name="newsletter" />
+                Подписаться на рассылку
+              </label>
+            </div>
+
+            <div class="field">
+              <label>Комментарий</label>
+              <textarea name="comment" rows="4"></textarea>
+            </div>
+
+            <div style="font-weight:800; font-size:20px; margin: 8px 0;" data-total>
+              Итоговая стоимость: 0 ₽
+              <div style="font-weight:600; font-size:14px; color:#414040;" data-delivery-note></div>
+            </div>
+
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
+              <button type="reset" class="btn" style="max-width:220px;">Сбросить</button>
+              <button type="submit" class="btn btn--primary" style="max-width:220px;">Оформить</button>
+            </div>
+            
+            <section class="block" data-payment style="display:none; margin-top:16px;">
+              <h3 style="margin:0 0 12px;">Оплата</h3>
+            
+              <div class="row2">
+                <div class="field">
+                  <label>Номер карты</label>
+                  <input
+                    type="text"
+                    name="cardNumber"
+                    placeholder="0000 0000 0000 0000"
+                    inputmode="numeric"
+                    maxlength="19"
+                  />
+                </div>
+            
+                <div class="field">
+                  <label>Имя держателя карты</label>
+                  <input
+                    type="text"
+                    name="cardHolder"
+                    placeholder="IVAN IVANOV"
+                  />
+                </div>
+              </div>
+            
+              <div class="row2">
+                <div class="field">
+                  <label>Срок действия</label>
+                  <input
+                    type="text"
+                    name="cardExpiry"
+                    placeholder="MM/YY"
+                    maxlength="5"
+                  />
+                </div>
+            
+                <div class="field">
+                  <label>CVC</label>
+                  <input
+                    type="password"
+                    name="cardCvc"
+                    placeholder="***"
+                    inputmode="numeric"
+                    maxlength="3"
+                  />
+                </div>
+              </div>
+            </section>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">© 2026 Экзаменационный вариант 1 | Сулейманов Р.А. 241-352</div>
+    </footer>
+  </div>
+
+  <script type="module" src="./assets/js/cart.js"></script>
+</body>
+</html>

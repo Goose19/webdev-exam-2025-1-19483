@@ -1,0 +1,24 @@
+/* Кнопки действия в заказе */
+.order-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+}
+
+/* Таблица заказов */
+.orders table{
+  width:100%;
+  table-layout:fixed;
+}
+
+/* Ячейки таблицы заказов */
+.orders th, .orders td{
+  vertical-align:top;
+  word-break:break-word;
+}
+.orders th:nth-child(1), .orders td:nth-child(1){width:70px;} /* ID-заказа */
+.orders th:nth-child(2), .orders td:nth-child(2){width:220px;} /* дата создания заказа */
+.orders th:nth-child(4), .orders td:nth-child(4){width:120px; text-align:left;} /* стоимость заказа */
+.orders th:nth-child(5), .orders td:nth-child(5){width:170px;} /* информация о доставке */
+.orders th:nth-child(6), .orders td:nth-child(6){width:210px;} /* действия с заказом */

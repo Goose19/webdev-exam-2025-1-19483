@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="container">
+        <div class="header__row">
+          <a class="brand" href="./index.html">
+            <div class="brand__logo">Logo</div>
+            <div>Магазин</div>
+          </a>
+
+          <form class="search" data-search>
+            <input type="text" placeholder="Введите запрос" data-search-input />
+            <button type="submit">Найти</button>
+            <div class="suggest" data-suggest></div>
+          </form>
+
+          <div class="actions">
+            <a class="icon-btn" href="./cart.html" title="Корзина"><i class="bi bi-bag"></i></a>
+            <a class="icon-btn" href="./orders.html" title="Личный кабинет"><i class="bi bi-person-square"></i></a>
+          </div>
+          <!--API Key-->
+          <div class="api-key">
+            <input type="text" placeholder="API key" autocomplete="off" data-api-key-input>
+            <button type="button" data-api-key-save>OK</button>
+            <button type="button" data-api-key-clear title="Сбросить ключ">×</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="notify" data-notify>
+      <div class="container"></div>
+    </div>
+
+    <main class="main">
+      <div class="container grid-main">
+        <aside class="sidebar">
+          <h3>Категории</h3>
+
+          <div class="field" data-categories></div>
+
+          <h3>Стоимость</h3>
+          <div class="field row2">
+            <div>
+              <label>От</label>
+              <input type="number" min="0" value="100" data-min-price />
+            </div>
+            <div>
+              <label>До</label>
+              <input type="number" min="0" value="5000" data-max-price />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>
+              <input type="checkbox" data-discount-only />
+              Только товары со скидками
+            </label>
+          </div>
+
+          <button class="btn btn--primary" data-apply>Применить</button>
+        </aside>
+
+        <section class="block">
+          <div class="block__head">
+            <h2 style="margin:0;">Каталог</h2>
+            <select data-sort>
+              <option value="rating:desc">По убыванию рейтинга</option>
+              <option value="rating:asc">По возрастанию рейтинга</option>
+              <option value="price:desc">По убыванию цены</option>
+              <option value="price:asc">По возрастанию цены</option>
+            </select>
+          </div>
+
+          <div class="cards" data-cards></div>
+
+          <div style="margin-top:14px;">
+            <button class="btn" data-load-more style="max-width:260px;">Загрузить ещё</button>
+          </div>
+
+          <div data-empty style="display:none; margin-top:12px; font-weight:600;"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">© 2026 Экзаменационный вариант 1 | Сулейманов Р.А. 241-352</div>
+    </footer>
+  </div>
+
+  <script type="module" src="./assets/js/catalog.js"></script>
+</body>
+</html>

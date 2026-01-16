@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/orders.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="container">
+        <div class="header__row">
+          <a class="brand" href="./index.html">
+            <div class="brand__logo">Logo</div>
+            <div>Магазин</div>
+          </a>
+
+          <div class="actions">
+            <a class="icon-btn" href="./index.html" title="Каталог"><i class="bi bi-house"></i></a>
+            <a class="icon-btn" href="./cart.html" title="Корзина"><i class="bi bi-bag"></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="notify" data-notify>
+      <div class="container"></div>
+    </div>
+
+    <main class="main">
+      <div class="container">
+        <section class="block">
+          <h2 style="margin:0;">Заказы</h2>
+
+          <div class="table-wrap" style="margin-top:12px;">
+            <table>
+              <thead>
+                <tr>
+                  <th>№</th>
+                  <th>Дата оформления</th>
+                  <th>Состав заказа</th>
+                  <th>Стоимость</th>
+                  <th>Доставка</th>
+                  <th>Действия</th>
+                </tr>
+              </thead>
+              <tbody data-orders></tbody>
+            </table>
+          </div>
+
+          <div data-no-orders style="display:none; margin-top:12px; font-weight:600;">
+            Заказов пока нет.
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">© 2026 Экзаменационный вариант 1 | Сулейманов Р.А. 241-352</div>
+    </footer>
+  </div>
+
+  <script type="module" src="./assets/js/orders.js"></script>
+</body>
+</html>
